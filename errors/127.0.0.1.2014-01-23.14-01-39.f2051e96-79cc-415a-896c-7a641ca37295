@@ -1,0 +1,1237 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.IOError'> [Errno socket error] [Errno 8] _ssl.c:504: EOF occurred in violation of protocol"
+p3
+sS'layer'
+p4
+S'/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/controllers/default.py'
+p5
+sS'code'
+p6
+S'# -*- coding: utf-8 -*- \n\n#########################################################################\n## This is a samples controller\n## - index is the default action of any application\n## - user is required for authentication and authorization\n## - download is for downloading files uploaded in the db (does streaming)\n## - call exposes all registered services (none by default)\n#########################################################################  \nimport pdb;\n\ndef index():\n    """\n    example action using the internationalization operator T and flash\n    rendered by views/default/index.html or views/generic.html\n    """\n\n    user = auth.user\n    print user\n    comment_list = db(db.comment_tbl).select()\n    print\' comment_list = \', comment_list\n    question_tbl = db(db.question_tbl).select()\n    print\' question_tbl = \', question_tbl\n    if user:\n        response.flash = T(\'You are %(name)s\', dict(name=user[\'first_name\']))\n        return dict(message=T(\'Hello, Facebook is telling that you are %(first_name)s %(last_name)s\', dict(first_name=user[\'first_name\'], last_name=user[\'last_name\'])))\n    response.flash = T(\'Welcome to web2py\')\n    return dict(message=T(\'Hello, please login aa   \'))\n\ndef user():\n    """\n    exposes:\n    http://..../[app]/default/user/login \n    http://..../[app]/default/user/logout\n    http://..../[app]/default/user/register\n    http://..../[app]/default/user/profile\n    http://..../[app]/default/user/retrieve_password\n    http://..../[app]/default/user/change_password\n    use @auth.requires_login()\n        @auth.requires_membership(\'group name\')\n        @auth.requires_permission(\'read\',\'table name\',record_id)\n    to decorate functions that need access control\n    """\n    import pdb;pdb.set_trace()\n    return dict(form=auth())\n\n\ndef download():\n    """\n    allows downloading of uploaded files\n    http://..../[app]/default/download/[filename]\n    """\n    return response.download(request,db)\n\n\ndef call():\n    """\n    exposes services. for example:\n    http://..../[app]/default/call/jsonrpc\n    decorate with @services.jsonrpc the functions to expose\n    supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv\n    """\n    session.forget()\n    return service()\n\n\n\nresponse._vars=response._caller(user)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.IOError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.IOError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.IOError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'__sizeof__'
+p20
+S'<built-in method __sizeof__ of exceptions.IOError object>'
+p21
+sS'__init__'
+p22
+S"<method-wrapper '__init__' of exceptions.IOError object>"
+p23
+sS'__setattr__'
+p24
+S"<method-wrapper '__setattr__' of exceptions.IOError object>"
+p25
+sS'__reduce_ex__'
+p26
+S'<built-in method __reduce_ex__ of exceptions.IOError object>'
+p27
+sS'__new__'
+p28
+S'<built-in method __new__ of type object>'
+p29
+sS'errno'
+p30
+S"'socket error'"
+p31
+sS'__format__'
+p32
+S'<built-in method __format__ of exceptions.IOError object>'
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.IOError'>"
+p35
+sS'filename'
+p36
+S'None'
+p37
+sS'__doc__'
+p38
+S"'I/O operation failed.'"
+p39
+sS'__getitem__'
+p40
+S"<method-wrapper '__getitem__' of exceptions.IOError object>"
+p41
+sS'__setstate__'
+p42
+S'<built-in method __setstate__ of exceptions.IOError object>'
+p43
+sS'__getattribute__'
+p44
+S"<method-wrapper '__getattribute__' of exceptions.IOError object>"
+p45
+sS'args'
+p46
+S"('socket error', SSLError(8, '_ssl.c:504: EOF occurred in violation of protocol'))"
+p47
+sS'__subclasshook__'
+p48
+S'<built-in method __subclasshook__ of type object>'
+p49
+sS'__unicode__'
+p50
+S'<built-in method __unicode__ of exceptions.IOError object>'
+p51
+sS'strerror'
+p52
+S"SSLError(8, '_ssl.c:504: EOF occurred in violation of protocol')"
+p53
+sS'__delattr__'
+p54
+S"<method-wrapper '__delattr__' of exceptions.IOError object>"
+p55
+sS'__repr__'
+p56
+S"<method-wrapper '__repr__' of exceptions.IOError object>"
+p57
+sS'__hash__'
+p58
+S"<method-wrapper '__hash__' of exceptions.IOError object>"
+p59
+ssS'evalue'
+p60
+S'[Errno socket error] [Errno 8] _ssl.c:504: EOF occurred in violation of protocol'
+p61
+sS'request'
+p62
+cgluon.html
+XML_unpickle
+p63
+(S's\xedU\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top">ajax</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">application</td><td valign="top">:</td><td><div>helloFacebook</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">args</td><td valign="top">:</td><td><div><table><tr><td><div>logout</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">body</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x10e832f48&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cid</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">client</td><td valign="top">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">controller</td><td valign="top">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cookies</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">session_id_admin</td><td valign="top">:</td><td><div>127.0.0.1-1f123ac3-ce0c-4092-8595-8851936712dd<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id_hellofacebook</td><td valign="top">:</td><td><div>127.0.0.1-31e33332-c52c-4319-8e61-c227f9b59729<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id_welcome</td><td valign="top">:</td><td><div>127.0.0.1-9b85eeb0-9486-4741-889d-55c1a771ff56<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">env</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">app_folders</td><td valign="top">:</td><td><div>set([&#x27;/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">applications_parent</td><td valign="top">:</td><td><div>/Users/huyheo/Documents/huy/LearnFB/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cmd_args</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cmd_options</td><td valign="top">:</td><td><div>&lt;Values at 0x10adb8998: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;fe80::8a53:95ff:fe2a:28a3%en1&#x27;, &#x27;172.20.10.3&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;port&#x27;: 9001, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;vkxs-Mac-mini.local&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/Users/huyheo/Documents/huy/LearnFB/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;winservice&#x27;: &#x27;&#x27;, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;profiler_filename&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;scheduler_groups&#x27;: None, &#x27;password&#x27;: &#x27;&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;interfaces&#x27;: None, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">db_sessions</td><td valign="top">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">debugging</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">gluon_parent</td><td valign="top">:</td><td><div>/Users/huyheo/Documents/huy/LearnFB/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept</td><td valign="top">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept_encoding</td><td valign="top">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept_language</td><td valign="top">:</td><td><div>vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2,ko;q=0.2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_connection</td><td valign="top">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_cookie</td><td valign="top">:</td><td><div>session_id_welcome=127.0.0.1-9b85eeb0-9486-4741-889d-55c1a771ff56; session_id_admin=127.0.0.1-1f123ac3-ce0c-4092-8595-8851936712dd; session_id_hellofacebook=127.0.0.1-31e33332-c52c-4319-8e61-c227f9b59729</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_host</td><td valign="top">:</td><td><div>127.0.0.1:9001</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_referer</td><td valign="top">:</td><td><div>http://127.0.0.1:9001/helloFacebook/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_user_agent</td><td valign="top">:</td><td><div>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_jython</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_pypy</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">local_hosts</td><td valign="top">:</td><td><div><table><tr><td><div>vkxs-Mac-mini.local</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>172.20.10.3</div></td></tr><tr><td><div>fe80::8a53:95ff:fe2a:28a3%en1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path_info</td><td valign="top">:</td><td><div>/helloFacebook/default/user/logout</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">query_string</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">remote_addr</td><td valign="top">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">remote_port</td><td valign="top">:</td><td><div>61294</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">request_method</td><td valign="top">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">request_uri</td><td valign="top">:</td><td><div>/helloFacebook/default/user/logout</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">script_name</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_name</td><td valign="top">:</td><td><div>vkxs-Mac-mini.local</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_port</td><td valign="top">:</td><td><div>9001</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_protocol</td><td valign="top">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_software</td><td valign="top">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_path</td><td valign="top">:</td><td><div>/Users/huyheo/Documents/huy/LearnFB/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_version</td><td valign="top">:</td><td><div>2.5.1-stable+timestamp.2013.06.16.12.00.29</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_errors</td><td valign="top">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x109fda1e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_file_wrapper</td><td valign="top">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x10aaf84c8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_input</td><td valign="top">:</td><td><div>&lt;socket._fileobject object at 0x10e836a50&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_multiprocess</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_multithread</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_run_once</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_url_scheme</td><td valign="top">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_version</td><td valign="top">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">extension</td><td valign="top">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">folder</td><td valign="top">:</td><td><div>/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">function</td><td valign="top">:</td><td><div>user</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">get_vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">global_settings</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">app_folders</td><td valign="top">:</td><td><div>set([&#x27;/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">applications_parent</td><td valign="top">:</td><td><div>/Users/huyheo/Documents/huy/LearnFB/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cmd_args</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cmd_options</td><td valign="top">:</td><td><div>&lt;Values at 0x10adb8998: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;fe80::8a53:95ff:fe2a:28a3%en1&#x27;, &#x27;172.20.10.3&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;port&#x27;: 9001, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;vkxs-Mac-mini.local&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/Users/huyheo/Documents/huy/LearnFB/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;winservice&#x27;: &#x27;&#x27;, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;profiler_filename&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;scheduler_groups&#x27;: None, &#x27;password&#x27;: &#x27;&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;interfaces&#x27;: None, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">db_sessions</td><td valign="top">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">debugging</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">gluon_parent</td><td valign="top">:</td><td><div>/Users/huyheo/Documents/huy/LearnFB/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_jython</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_pypy</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">local_hosts</td><td valign="top">:</td><td><div><table><tr><td><div>vkxs-Mac-mini.local</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>172.20.10.3</div></td></tr><tr><td><div>fe80::8a53:95ff:fe2a:28a3%en1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_version</td><td valign="top">:</td><td><div>2.5.1-stable+timestamp.2013.06.16.12.00.29</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_https</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_local</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_restful</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">now</td><td valign="top">:</td><td><div>datetime.datetime(2014, 1, 23, 14, 1, 39, 192831)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">post_vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">raw_args</td><td valign="top">:</td><td><div>logout</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">raw_extension</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">url</td><td valign="top">:</td><td><div>/helloFacebook/default/user/logout</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">utcnow</td><td valign="top">:</td><td><div>datetime.datetime(2014, 1, 23, 7, 1, 39, 192843)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uuid</td><td valign="top">:</td><td><div>helloFacebook/127.0.0.1.2014-01-23.14-01-39.f2051e96-79cc-415a-896c-7a641ca37295</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">environ</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT</td><td valign="top">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT_ENCODING</td><td valign="top">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT_LANGUAGE</td><td valign="top">:</td><td><div>vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2,ko;q=0.2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_CONNECTION</td><td valign="top">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_COOKIE</td><td valign="top">:</td><td><div>session_id_welcome=127.0.0.1-9b85eeb0-9486-4741-889d-55c1a771ff56; session_id_admin=127.0.0.1-1f123ac3-ce0c-4092-8595-8851936712dd; session_id_hellofacebook=127.0.0.1-31e33332-c52c-4319-8e61-c227f9b59729</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_HOST</td><td valign="top">:</td><td><div>127.0.0.1:9001</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_REFERER</td><td valign="top">:</td><td><div>http://127.0.0.1:9001/helloFacebook/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_USER_AGENT</td><td valign="top">:</td><td><div>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">PATH_INFO</td><td valign="top">:</td><td><div>/helloFacebook/default/user/logout</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">QUERY_STRING</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REMOTE_ADDR</td><td valign="top">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REMOTE_PORT</td><td valign="top">:</td><td><div>61294</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REQUEST_METHOD</td><td valign="top">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REQUEST_URI</td><td valign="top">:</td><td><div>/helloFacebook/default/user/logout</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SCRIPT_NAME</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_NAME</td><td valign="top">:</td><td><div>vkxs-Mac-mini.local</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_PORT</td><td valign="top">:</td><td><div>9001</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_PROTOCOL</td><td valign="top">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_SOFTWARE</td><td valign="top">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.errors</td><td valign="top">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x109fda1e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.file_wrapper</td><td valign="top">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x10aaf84c8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.input</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x10e832f48&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.multiprocess</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.multithread</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.run_once</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.url_scheme</td><td valign="top">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.version</td><td valign="top">:</td><td><div>1</div></td></tr></table></div></td></tr></table></div></td></tr></table></div>'
+tRp64
+sS'frames'
+p65
+(lp66
+(dp67
+S'file'
+p68
+S'/Users/huyheo/Documents/huy/LearnFB/web2py/gluon/restricted.py'
+p69
+sS'dump'
+p70
+(dp71
+S'environment'
+p72
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, 'CENTER': <class 'gluon.html.CENTER'>, ...}"
+p73
+sS'ccode'
+p74
+S'<code object <module> at 0x10e8d55b0, file "/Use...s/helloFacebook/controllers/default.py", line 10>'
+p75
+ssS'lnum'
+p76
+I212
+sS'lines'
+p77
+(dp78
+I207
+S'    try:'
+p79
+sI208
+S'        if isinstance(code, types.CodeType):'
+p80
+sI209
+S'            ccode = code'
+p81
+sI210
+S'        else:'
+p82
+sI211
+S'            ccode = compile2(code, layer)'
+p83
+sI212
+S'        exec ccode in environment'
+p84
+sI213
+S'    except HTTP:'
+p85
+sI214
+S'        raise'
+p86
+sI215
+S'    except RestrictedError:'
+p87
+sI216
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p88
+ssS'call'
+p89
+S"(code='# -*- coding: utf-8 -*- \\n\\n######################...rvice()\\n\\n\\n\\nresponse._vars=response._caller(user)\\n', environment={'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, 'CENTER': <class 'gluon.html.CENTER'>, ...}, layer='/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/controllers/default.py')"
+p90
+sS'func'
+p91
+S'restricted'
+p92
+sa(dp93
+g68
+S'/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/controllers/default.py'
+p94
+sg70
+(dp95
+sg76
+I68
+sg77
+(dp96
+I64
+S'    return service()'
+p97
+sI65
+S''
+sI66
+S''
+sI57
+S'    """'
+p98
+sI58
+S'    exposes services. for example:'
+p99
+sI59
+S'    http://..../[app]/default/call/jsonrpc'
+p100
+sI60
+S'    decorate with @services.jsonrpc the functions to expose'
+p101
+sI61
+S'    supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv'
+p102
+sI62
+S'    """'
+p103
+sI63
+S'    session.forget()'
+p104
+ssg89
+S'()'
+p105
+sg91
+S'<module>'
+p106
+sa(dp107
+g68
+S'/Users/huyheo/Documents/huy/LearnFB/web2py/gluon/globals.py'
+p108
+sg70
+(dp109
+S'self'
+p110
+S'undefined'
+p111
+sS'f'
+S'<function user>'
+p112
+ssg76
+I194
+sg77
+(dp113
+I192
+S"        self.delimiters = ('{{', '}}')"
+p114
+sI193
+S'        self._vars = None'
+p115
+sI194
+S'        self._caller = lambda f: f()'
+p116
+sI195
+S'        self._view_environment = None'
+p117
+sI196
+S'        self._custom_commit = None'
+p118
+sI197
+S'        self._custom_rollback = None'
+p119
+sI198
+S''
+sI189
+S'        self.menu = []             # used by the default view layout'
+p120
+sI190
+S'        self.files = []            # used by web2py_ajax.html'
+p121
+sI191
+S'        self.generic_patterns = []  # patterns to allow generic views'
+p122
+ssg89
+S'(f=<function user>)'
+p123
+sg91
+S'<lambda>'
+p124
+sa(dp125
+g68
+S'/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/controllers/default.py'
+p126
+sg70
+(dp127
+S'global auth'
+p128
+S'<gluon.tools.Auth object>'
+p129
+sS'form'
+p130
+g111
+sS'builtindict'
+p131
+S"<type 'dict'>"
+p132
+ssg76
+I45
+sg77
+(dp133
+I40
+S"        @auth.requires_membership('group name')"
+p134
+sI41
+S"        @auth.requires_permission('read','table name',record_id)"
+p135
+sI42
+S'    to decorate functions that need access control'
+p136
+sI43
+S'    """'
+p137
+sI44
+S'    import pdb;pdb.set_trace()'
+p138
+sI45
+S'    return dict(form=auth())'
+p139
+sI46
+S''
+sI47
+S''
+sI48
+S'def download():'
+p140
+sI49
+S'    """'
+p141
+ssg89
+S'()'
+p142
+sg91
+S'user'
+p143
+sa(dp144
+g68
+S'/Users/huyheo/Documents/huy/LearnFB/web2py/gluon/tools.py'
+p145
+sg70
+(dp146
+S'self'
+p147
+S'<gluon.tools.Auth object>'
+p148
+sS'args'
+p149
+S"['logout']"
+p150
+sS'builtingetattr'
+p151
+S'<built-in function getattr>'
+p152
+ssg76
+I1287
+sg77
+(dp153
+I1282
+S"                       'change_password', 'profile', 'groups',"
+p154
+sI1283
+S"                       'impersonate', 'not_authorized'):"
+p155
+sI1284
+S"            if len(request.args) >= 2 and args[0] == 'impersonate':"
+p156
+sI1285
+S'                return getattr(self, args[0])(request.args[1])'
+p157
+sI1286
+S'            else:'
+p158
+sI1287
+S'                return getattr(self, args[0])()'
+p159
+sI1288
+S"        elif args[0] == 'cas' and not self.settings.cas_provider:"
+p160
+sI1289
+S"            if args(1) == self.settings.cas_actions['login']:"
+p161
+sI1290
+S'                return self.cas_login(version=2)'
+p162
+sI1291
+S"            elif args(1) == self.settings.cas_actions['validate']:"
+p163
+ssg89
+S'(self=<gluon.tools.Auth object>)'
+p164
+sg91
+S'__call__'
+p165
+sa(dp166
+g68
+S'/Users/huyheo/Documents/huy/LearnFB/web2py/gluon/tools.py'
+p167
+sg70
+(dp168
+S'cas'
+p169
+S'<__restricted__.FaceBookAccount object>'
+p170
+sS'cas.get_user'
+p171
+S'<bound method FaceBookAccount.get_user of <__restricted__.FaceBookAccount object>>'
+p172
+sS'cas_user'
+p173
+g111
+ssg76
+I2240
+sg77
+(dp174
+I2240
+S'            cas_user = cas.get_user()'
+p175
+sI2241
+S'            if cas_user:'
+p176
+sI2242
+S'                next = cas.logout_url(next)'
+p177
+sI2243
+S''
+sI2244
+S'        current.session.auth = None'
+p178
+sI2235
+S'            log = self.messages.logout_log'
+p179
+sI2236
+S'        if self.user:'
+p180
+sI2237
+S'            self.log_event(log, self.user)'
+p181
+sI2238
+S'        if self.settings.login_form != self:'
+p182
+sI2239
+S'            cas = self.settings.login_form'
+p183
+ssg89
+S"(self=<gluon.tools.Auth object>, next='/helloFacebook/default/index', onlogout=None, log='User %(id)s Logged-out')"
+p184
+sg91
+S'logout'
+p185
+sa(dp186
+g68
+S'/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/models/db.py'
+p187
+sg70
+(dp188
+S'self'
+p189
+S'<__restricted__.FaceBookAccount object>'
+p190
+sS'self.graph'
+p191
+S'<facebook.GraphAPI object>'
+p192
+sS'user'
+p193
+S'None'
+p194
+sS'self.graph.get_object'
+p195
+S'<bound method GraphAPI.get_object of <facebook.GraphAPI object>>'
+p196
+ssg76
+I137
+sg77
+(dp197
+I132
+S'        if not self.graph:'
+p198
+sI133
+S'            self.graph = GraphAPI((self.accessToken()))'
+p199
+sI134
+S''
+sI135
+S'        user = None'
+p200
+sI136
+S'        try:'
+p201
+sI137
+S'            user = self.graph.get_object("me")'
+p202
+sI138
+S'        except GraphAPIError, e:'
+p203
+sI139
+S'            self.session.token = None'
+p204
+sI140
+S'            self.graph = None'
+p205
+sI141
+S''
+ssg89
+S'(self=<__restricted__.FaceBookAccount object>)'
+p206
+sg91
+S'get_user'
+p207
+sa(dp208
+g68
+S'/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/modules/facebook.py'
+p209
+sg70
+(dp210
+S'self'
+p211
+S'<facebook.GraphAPI object>'
+p212
+sS'self.request'
+p213
+S'<bound method GraphAPI.request of <facebook.GraphAPI object>>'
+p214
+sS'id'
+p215
+S"'me'"
+p216
+sS'args'
+p217
+g19
+ssg76
+I96
+sg77
+(dp218
+I96
+S'        return self.request(id, args)'
+p219
+sI97
+S''
+sI98
+S'    def get_objects(self, ids, **args):'
+p220
+sI99
+S'        """Fetchs all of the given object from the graph.'
+p221
+sI100
+S''
+sI91
+S'    def __init__(self, access_token=None):'
+p222
+sI92
+S'        self.access_token = access_token'
+p223
+sI93
+S''
+sI94
+S'    def get_object(self, id, **args):'
+p224
+sI95
+S'        """Fetchs the given object from the graph."""'
+p225
+ssg89
+S"(self=<facebook.GraphAPI object>, id='me', **args={})"
+p226
+sg91
+S'get_object'
+p227
+sa(dp228
+g68
+S'/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/modules/facebook.py'
+p229
+sg70
+(dp230
+S'global urllib'
+p231
+S"<module 'urllib' from '/System/Library/Framework...framework/Versions/2.7/lib/python2.7/urllib.pyc'>"
+p232
+sS'urllib.urlencode'
+p233
+S'<function urlencode>'
+p234
+sS'post_data'
+p235
+S'None'
+p236
+sS'args'
+p237
+S"{'access_token': 'CAADiFIZAkXv0BANdMBpH6gOQgeZAkDqzaxKR4Yx7xLyBPL7...eb4o2dXZBzZBR72T5PBQTlZBduazTvQSmXNHOZBpCvKWUv2jx'}"
+p238
+ssg76
+I180
+sg77
+(dp239
+I175
+S'                post_args["access_token"] = self.access_token'
+p240
+sI176
+S'            else:'
+p241
+sI177
+S'                args["access_token"] = self.access_token'
+p242
+sI178
+S'        post_data = None if post_args is None else urllib.urlencode(post_args)'
+p243
+sI179
+S'        file = urllib.urlopen("https://graph.facebook.com/" + path + "?" +'
+p244
+sI180
+S'                              urllib.urlencode(args), post_data)'
+p245
+sI181
+S'        try:'
+p246
+sI182
+S'            response = _parse_json(file.read())'
+p247
+sI183
+S'        finally:'
+p248
+sI184
+S'            file.close()'
+p249
+ssg89
+S"(self=<facebook.GraphAPI object>, path='me', args={'access_token': 'CAADiFIZAkXv0BANdMBpH6gOQgeZAkDqzaxKR4Yx7xLyBPL7...eb4o2dXZBzZBR72T5PBQTlZBduazTvQSmXNHOZBpCvKWUv2jx'}, post_args=None)"
+p250
+sg91
+g62
+sa(dp251
+g68
+S'/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib.py'
+p252
+sg70
+(dp253
+S'url'
+p254
+S"'https://graph.facebook.com/me?access_token=CAADi...eb4o2dXZBzZBR72T5PBQTlZBduazTvQSmXNHOZBpCvKWUv2jx'"
+p255
+sS'opener'
+p256
+S'<gluon.contrib.autolinks.VimeoURLOpener instance>'
+p257
+sS'opener.open'
+p258
+S'<bound method VimeoURLOpener.open of <gluon.contrib.autolinks.VimeoURLOpener instance>>'
+p259
+ssg76
+I87
+sg77
+(dp260
+I82
+S'        opener = FancyURLopener()'
+p261
+sI83
+S'        _urlopener = opener'
+p262
+sI84
+S'    else:'
+p263
+sI85
+S'        opener = _urlopener'
+p264
+sI86
+S'    if data is None:'
+p265
+sI87
+S'        return opener.open(url)'
+p266
+sI88
+S'    else:'
+p267
+sI89
+S'        return opener.open(url, data)'
+p268
+sI90
+S'def urlretrieve(url, filename=None, reporthook=None, data=None):'
+p269
+sI91
+S'    global _urlopener'
+p270
+ssg89
+S"(url='https://graph.facebook.com/me?access_token=CAADi...eb4o2dXZBzZBR72T5PBQTlZBduazTvQSmXNHOZBpCvKWUv2jx', data=None, proxies=None)"
+p271
+sg91
+S'urlopen'
+p272
+sa(dp273
+g68
+S'/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib.py'
+p274
+sg70
+(dp275
+S'url'
+p276
+S"'//graph.facebook.com/me?access_token=CAADiFIZAkX...eb4o2dXZBzZBR72T5PBQTlZBduazTvQSmXNHOZBpCvKWUv2jx'"
+p277
+sS'self'
+p278
+S'<gluon.contrib.autolinks.VimeoURLOpener instance>'
+p279
+sS'builtingetattr'
+p280
+S'<built-in function getattr>'
+p281
+sS'name'
+p282
+S"'open_https'"
+p283
+ssg76
+I208
+sg77
+(dp284
+I203
+S'                return self.open_unknown_proxy(proxy, fullurl, data)'
+p285
+sI204
+S'            else:'
+p286
+sI205
+S'                return self.open_unknown(fullurl, data)'
+p287
+sI206
+S'        try:'
+p288
+sI207
+S'            if data is None:'
+p289
+sI208
+S'                return getattr(self, name)(url)'
+p290
+sI209
+S'            else:'
+p291
+sI210
+S'                return getattr(self, name)(url, data)'
+p292
+sI211
+S'        except socket.error, msg:'
+p293
+sI212
+S"            raise IOError, ('socket error', msg), sys.exc_info()[2]"
+p294
+ssg89
+S"(self=<gluon.contrib.autolinks.VimeoURLOpener instance>, fullurl='https://graph.facebook.com/me?access_token=CAADi...eb4o2dXZBzZBR72T5PBQTlZBduazTvQSmXNHOZBpCvKWUv2jx', data=None)"
+p295
+sg91
+S'open'
+p296
+sa(dp297
+g68
+S'/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib.py'
+p298
+sg70
+(dp299
+S'h'
+S'<httplib.HTTPS instance>'
+p300
+sS'data'
+p301
+S'None'
+p302
+sS'h.endheaders'
+p303
+S'<bound method HTTPSConnection.endheaders of <httplib.HTTPSConnection instance>>'
+p304
+ssg76
+I437
+sg77
+(dp305
+I432
+S"                h.putrequest('GET', selector)"
+p306
+sI433
+S"            if proxy_auth: h.putheader('Proxy-Authorization', 'Basic %s' % proxy_auth)"
+p307
+sI434
+S"            if auth: h.putheader('Authorization', 'Basic %s' % auth)"
+p308
+sI435
+S"            if realhost: h.putheader('Host', realhost)"
+p309
+sI436
+S'            for args in self.addheaders: h.putheader(*args)'
+p310
+sI437
+S'            h.endheaders(data)'
+p311
+sI438
+S'            errcode, errmsg, headers = h.getreply()'
+p312
+sI439
+S'            fp = h.getfile()'
+p313
+sI440
+S'            if errcode == -1:'
+p314
+sI441
+S'                if fp: fp.close()'
+p315
+ssg89
+S"(self=<gluon.contrib.autolinks.VimeoURLOpener instance>, url='//graph.facebook.com/me?access_token=CAADiFIZAkX...eb4o2dXZBzZBR72T5PBQTlZBduazTvQSmXNHOZBpCvKWUv2jx', data=None)"
+p316
+sg91
+S'open_https'
+p317
+sa(dp318
+g68
+S'/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py'
+p319
+sg70
+(dp320
+S'message_body'
+p321
+S'None'
+p322
+sS'self'
+p323
+S'<httplib.HTTPSConnection instance>'
+p324
+sS'self._send_output'
+p325
+S'<bound method HTTPSConnection._send_output of <httplib.HTTPSConnection instance>>'
+p326
+ssg76
+I969
+sg77
+(dp327
+I964
+S'        """'
+p328
+sI965
+S'        if self.__state == _CS_REQ_STARTED:'
+p329
+sI966
+S'            self.__state = _CS_REQ_SENT'
+p330
+sI967
+S'        else:'
+p331
+sI968
+S'            raise CannotSendHeader()'
+p332
+sI969
+S'        self._send_output(message_body)'
+p333
+sI970
+S''
+sI971
+S'    def request(self, method, url, body=None, headers={}):'
+p334
+sI972
+S'        """Send a complete request to the server."""'
+p335
+sI973
+S'        self._send_request(method, url, body, headers)'
+p336
+ssg89
+S'(self=<httplib.HTTPSConnection instance>, message_body=None)'
+p337
+sg91
+S'endheaders'
+p338
+sa(dp339
+g68
+S'/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py'
+p340
+sg70
+(dp341
+S'msg'
+p342
+S"'GET /me?access_token=CAADiFIZAkXv0BANdMBpH6gOQge...: graph.facebook.com\\r\\nUser-Agent: Mozilla/4.0\\r\\n\\r\\n'"
+p343
+sS'self'
+p344
+S'<httplib.HTTPSConnection instance>'
+p345
+sS'self.send'
+p346
+S'<bound method HTTPSConnection.send of <httplib.HTTPSConnection instance>>'
+p347
+ssg76
+I829
+sg77
+(dp348
+I832
+S'            #we must run the risk of Nagle'
+p349
+sI833
+S'            self.send(message_body)'
+p350
+sI824
+S'        # it will avoid performance problems caused by the interaction'
+p351
+sI825
+S'        # between delayed ack and the Nagle algorithm.'
+p352
+sI826
+S'        if isinstance(message_body, str):'
+p353
+sI827
+S'            msg += message_body'
+p354
+sI828
+S'            message_body = None'
+p355
+sI829
+S'        self.send(msg)'
+p356
+sI830
+S'        if message_body is not None:'
+p357
+sI831
+S'            #message_body was not a string (i.e. it is a file) and'
+p358
+ssg89
+S'(self=<httplib.HTTPSConnection instance>, message_body=None)'
+p359
+sg91
+S'_send_output'
+p360
+sa(dp361
+g68
+S'/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py'
+p362
+sg70
+(dp363
+S'self'
+p364
+S'<httplib.HTTPSConnection instance>'
+p365
+sS'self.connect'
+p366
+S'<bound method HTTPSConnection.connect of <httplib.HTTPSConnection instance>>'
+p367
+ssg76
+I791
+sg77
+(dp368
+I786
+S''
+sI787
+S'    def send(self, data):'
+p369
+sI788
+S'        """Send `data\' to the server."""'
+p370
+sI789
+S'        if self.sock is None:'
+p371
+sI790
+S'            if self.auto_open:'
+p372
+sI791
+S'                self.connect()'
+p373
+sI792
+S'            else:'
+p374
+sI793
+S'                raise NotConnected()'
+p375
+sI794
+S''
+sI795
+S'        if self.debuglevel > 0:'
+p376
+ssg89
+S"(self=<httplib.HTTPSConnection instance>, data='GET /me?access_token=CAADiFIZAkXv0BANdMBpH6gOQge...: graph.facebook.com\\r\\nUser-Agent: Mozilla/4.0\\r\\n\\r\\n')"
+p377
+sg91
+S'send'
+p378
+sa(dp379
+g68
+S'/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py'
+p380
+sg70
+(dp381
+S'global ssl'
+p382
+S"<module 'ssl' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.pyc'>"
+p383
+sS'self'
+p384
+S'<httplib.HTTPSConnection instance>'
+p385
+sS'sock'
+p386
+S'<socket._socketobject object>'
+p387
+sS'self.cert_file'
+p388
+S'None'
+p389
+sS'self.key_file'
+p390
+S'None'
+p391
+sS'ssl.wrap_socket'
+p392
+S'<function wrap_socket>'
+p393
+sS'self.sock'
+p394
+S'None'
+p395
+ssg76
+I1176
+sg77
+(dp396
+I1171
+S'            sock = socket.create_connection((self.host, self.port),'
+p397
+sI1172
+S'                                            self.timeout, self.source_address)'
+p398
+sI1173
+S'            if self._tunnel_host:'
+p399
+sI1174
+S'                self.sock = sock'
+p400
+sI1175
+S'                self._tunnel()'
+p401
+sI1176
+S'            self.sock = ssl.wrap_socket(sock, self.key_file, self.cert_file)'
+p402
+sI1177
+S''
+sI1178
+S'    __all__.append("HTTPSConnection")'
+p403
+sI1179
+S''
+sI1180
+S'    class HTTPS(HTTP):'
+p404
+ssg89
+S'(self=<httplib.HTTPSConnection instance>)'
+p405
+sg91
+S'connect'
+p406
+sa(dp407
+g68
+S'/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py'
+p408
+sg70
+(dp409
+S'ciphers'
+p410
+S'None'
+p411
+ssg76
+I387
+sg77
+(dp412
+I384
+S'                     ssl_version=ssl_version, ca_certs=ca_certs,'
+p413
+sI385
+S'                     do_handshake_on_connect=do_handshake_on_connect,'
+p414
+sI386
+S'                     suppress_ragged_eofs=suppress_ragged_eofs,'
+p415
+sI387
+S'                     ciphers=ciphers)'
+p416
+sI388
+S''
+sI389
+S''
+sI390
+S'# some utility functions'
+p417
+sI391
+S''
+sI382
+S'    return SSLSocket(sock, keyfile=keyfile, certfile=certfile,'
+p418
+sI383
+S'                     server_side=server_side, cert_reqs=cert_reqs,'
+p419
+ssg89
+S'(sock=<socket._socketobject object>, keyfile=None, certfile=None, server_side=False, cert_reqs=0, ssl_version=2, ca_certs=None, do_handshake_on_connect=True, suppress_ragged_eofs=True, ciphers=None)'
+p420
+sg91
+S'wrap_socket'
+p421
+sa(dp422
+g68
+S'/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py'
+p423
+sg70
+(dp424
+S'self'
+p425
+S'<ssl.SSLSocket object>'
+p426
+sS'self.do_handshake'
+p427
+S'<bound method SSLSocket.do_handshake of <ssl.SSLSocket object>>'
+p428
+ssg76
+I143
+sg77
+(dp429
+I138
+S'            self._sslobj = _ssl.sslwrap(self._sock, server_side,'
+p430
+sI139
+S'                                        keyfile, certfile,'
+p431
+sI140
+S'                                        cert_reqs, ssl_version, ca_certs,'
+p432
+sI141
+S'                                        ciphers)'
+p433
+sI142
+S'            if do_handshake_on_connect:'
+p434
+sI143
+S'                self.do_handshake()'
+p435
+sI144
+S'        self.keyfile = keyfile'
+p436
+sI145
+S'        self.certfile = certfile'
+p437
+sI146
+S'        self.cert_reqs = cert_reqs'
+p438
+sI147
+S'        self.ssl_version = ssl_version'
+p439
+ssg89
+S"(self=<ssl.SSLSocket object>, sock=<socket._socketobject object>, keyfile=None, certfile=None, server_side=False, cert_reqs=0, ssl_version=2, ca_certs=None, do_handshake_on_connect=True, suppress_ragged_eofs=True, ciphers='DEFAULT:!aNULL:!eNULL:!LOW:!EXPORT:!SSLv2')"
+p440
+sg91
+g22
+sa(dp441
+g68
+S'/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py'
+p442
+sg70
+(dp443
+S'self._sslobj.do_handshake'
+p444
+S'<built-in method do_handshake of ssl.SSLContext object>'
+p445
+sS'self'
+p446
+S'<ssl.SSLSocket object>'
+p447
+sS'self._sslobj'
+p448
+S'<ssl.SSLContext object>'
+p449
+ssg76
+I305
+sg77
+(dp450
+I300
+S''
+sI301
+S'    def do_handshake(self):'
+p451
+sI302
+S''
+sI303
+S'        """Perform a TLS/SSL handshake."""'
+p452
+sI304
+S''
+sI305
+S'        self._sslobj.do_handshake()'
+p453
+sI306
+S''
+sI307
+S'    def _real_connect(self, addr, return_errno):'
+p454
+sI308
+S'        # Here we assume that the socket is client-side, and not'
+p455
+sI309
+S'        # connected at the time of the call.  We connect it, then wrap it.'
+p456
+ssg89
+S'(self=<ssl.SSLSocket object>)'
+p457
+sg91
+S'do_handshake'
+p458
+sasS'pyver'
+p459
+S'Python 2.7.5: /usr/bin/python (prefix: /System/Library/Frameworks/Python.framework/Versions/2.7)'
+p460
+sS'session'
+p461
+g63
+(S'sF\n\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top">auth</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">expiration</td><td valign="top">:</td><td><div>3600</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">hmac_key</td><td valign="top">:</td><td><div>a52affb4-5acd-4138-bc5d-3095cf4e77c7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">last_visit</td><td valign="top">:</td><td><div>datetime.datetime(2014, 1, 23, 14, 1, 39, 192831)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">remember</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">user</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">email</td><td valign="top">:</td><td><div>mhuy82gnr@yahoo.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">first_name</td><td valign="top">:</td><td><div>Nguyen</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">id</td><td valign="top">:</td><td><div>1L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">last_name</td><td valign="top">:</td><td><div>Huy</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">registration_key</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">username</td><td valign="top">:</td><td><div>540428388</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">user_groups</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">1</td><td valign="top">:</td><td><div>user_1</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">flash</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">redirect_uri</td><td valign="top">:</td><td><div>http://127.0.0.1:9001/helloFacebook/default/user/login</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">token</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">access_token</td><td valign="top">:</td><td><div>CAADiFIZAkXv0BANdMBpH6gOQgeZAkDqzaxKR4Yx7xLyBPL7rHZA6Kfv53E6WIWXLGDWZCzPzStmJ3briBl7cGz8VuHKK3ZCBXThrAzbEZAj4y8yVSKS5f0iTZBk9WhXr3RDARB0YLseb4o2dXZBzZBR72T5PBQTlZBduazTvQSmXNHOZBpCvKWUv2jx</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div>1395633693.619488</div></td></tr></table></div></td></tr></table></div>'
+tRp462
+sS'etype'
+p463
+S"<type 'exceptions.IOError'>"
+p464
+sS'date'
+p465
+S'Thu Jan 23 14:02:32 2014'
+p466
+sS'response'
+p467
+g63
+(S'si\x1a\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top">body</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x10adabf10&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cookies</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">session_id_hellofacebook</td><td valign="top">:</td><td><div>127.0.0.1-31e33332-c52c-4319-8e61-c227f9b59729<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">delimiters</td><td valign="top">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">files</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">flash</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">generic_patterns</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">headers</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">X-Powered-By</td><td valign="top">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">menu</td><td valign="top">:</td><td><div><table><tr><td><div><table><tr><td><div>Index</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/helloFacebook/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">menu_edit</td><td valign="top">:</td><td><div><table><tr><td><div><table><tr><td><div>Edit</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design/helloFacebook</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Controller</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/helloFacebook/controllers/default.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>View</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/helloFacebook/views/default/user.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Layout</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/helloFacebook/views/layout.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Stylesheet</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/helloFacebook/static/base.css</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>DB Model</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/helloFacebook/models/db.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Menu Model</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/helloFacebook/models/menu.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Database</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/helloFacebook/appadmin/index</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">meta</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">models_to_run</td><td valign="top">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/user/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">postprocessing</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_cookie_expires</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_data_name</td><td valign="top">:</td><td><div>session_data_hellofacebook</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_file</td><td valign="top">:</td><td><div>&lt;open file &#x27;/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/sessions/127.0.0.1-31e33332-c52c-4319-8e61-c227f9b59729&#x27;, mode &#x27;rb+&#x27; at 0x10aaeaed0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_filename</td><td valign="top">:</td><td><div>/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/sessions/127.0.0.1-31e33332-c52c-4319-8e61-c227f9b59729</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id</td><td valign="top">:</td><td><div>127.0.0.1-31e33332-c52c-4319-8e61-c227f9b59729</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id_name</td><td valign="top">:</td><td><div>session_id_hellofacebook</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_locked</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_new</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_storage_type</td><td valign="top">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">status</td><td valign="top">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">subtitle</td><td valign="top">:</td><td><div>customize me!</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">title</td><td valign="top">:</td><td><div>helloFacebook</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">view</td><td valign="top">:</td><td><div>default/user.html</div></td></tr></table></div>'
+tRp468
+sS'locals'
+p469
+(dp470
+S'self'
+p471
+S'<ssl.SSLSocket object>'
+p472
+sssS'traceback'
+p473
+S'Traceback (most recent call last):\n  File "/Users/huyheo/Documents/huy/LearnFB/web2py/gluon/restricted.py", line 212, in restricted\n    exec ccode in environment\n  File "/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/controllers/default.py", line 68, in <module>\n  File "/Users/huyheo/Documents/huy/LearnFB/web2py/gluon/globals.py", line 194, in <lambda>\n    self._caller = lambda f: f()\n  File "/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/controllers/default.py", line 45, in user\n    return dict(form=auth())\n  File "/Users/huyheo/Documents/huy/LearnFB/web2py/gluon/tools.py", line 1287, in __call__\n    return getattr(self, args[0])()\n  File "/Users/huyheo/Documents/huy/LearnFB/web2py/gluon/tools.py", line 2240, in logout\n    cas_user = cas.get_user()\n  File "/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/models/db.py", line 137, in get_user\n    user = self.graph.get_object("me")\n  File "/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/modules/facebook.py", line 96, in get_object\n    return self.request(id, args)\n  File "/Users/huyheo/Documents/huy/LearnFB/web2py/applications/helloFacebook/modules/facebook.py", line 180, in request\n    urllib.urlencode(args), post_data)\n  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib.py", line 87, in urlopen\n    return opener.open(url)\n  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib.py", line 208, in open\n    return getattr(self, name)(url)\n  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib.py", line 437, in open_https\n    h.endheaders(data)\n  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 969, in endheaders\n    self._send_output(message_body)\n  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 829, in _send_output\n    self.send(msg)\n  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 791, in send\n    self.connect()\n  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 1176, in connect\n    self.sock = ssl.wrap_socket(sock, self.key_file, self.cert_file)\n  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 387, in wrap_socket\n    ciphers=ciphers)\n  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 143, in __init__\n    self.do_handshake()\n  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 305, in do_handshake\n    self._sslobj.do_handshake()\nIOError: [Errno socket error] [Errno 8] _ssl.c:504: EOF occurred in violation of protocol\n'
+p474
+s.
